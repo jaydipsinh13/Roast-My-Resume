@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roast my Resume</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="https://d31pjuirwqbaad.cloudfront.net/wp-content/uploads/2019/08/kissclipart-website-icon-png-clipart-computer-icons-ac62ecb3b8ae4d41.png?x61175">
+    
+    <!-- Javascript -->
+    <script>
+      let width = screen.width;
+      
+      if(480>width){
+        alert("Android device not supported showing pdf in browser");
+      }
+
+    </script>
+    
+  </head>
+  <body>
+    <main>
+      <div class="big-wrapper light">
+        <img src="./img/shape.png" alt="" class="shape" />
+
+        <header>
+          <div class="container">
+            <div class="logo">
+              <img src="./img/logo.png" alt="Logo" />
+              <h3>Danvo in a new branch</h3>
+            </div>
+
+            <!-- <div class="links">
+              <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#" class="btn">Sign up</a></li>
+              </ul>
+            </div> -->
+
+            <nav>
+              <!--logo-->
+              <a href="#">
+                <img src="https://lanman2018.ieee-lanman.org/files/2016/01/sample-logo@2x.png" class="nav-logo"/>
+                </a>
+              <!--menu-btn----------->
+              <input class="menu-btn" type="checkbox" id="menu-btn" />
+              <label class="menu-icon" for="menu-btn">
+                <span class="nav-icon"></span>
+              </label>
+              <!--menu-->
+              <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#recent-resume">Lasted</a></li>
+                <li><a href="#trending-resume">Trending</a></li>
+                <li><a href="review-page.html">View Resume</a></li>
+              </ul>
+            </nav>
+
+            <div class="overlay"></div>
+
+            <!-- <div class="hamburger-menu">
+              <div class="bar"></div>
+            </div> -->
+          </div>
+        </header>
+
+        <div class="showcase-area">
+          <div class="container">
+            <div class="left">
+              <div class="big-title">
+                <h1>Future is here,</h1>
+                <h1>Start Exploring now.</h1>
+              </div>
+              <p class="text">
+                <!-- Resume checker community help to improve your resume  -->
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt obcaecati voluptates, voluptatum blanditiis pariatur nisi.
+              </p>
+              <div class="cta">
+              <a href="#" type="file" class="btn">Upload Resume</a>
+              <input type="file" class="file-input" accept="image/*" hidden>
+              </div>
+            </div>
+
+            <div class="right">
+              <img src="./img/person.png" alt="Person Image" class="person" />
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="bottom-area">
+          <div class="container">
+            <button class="toggle-btn">
+              <i class="far fa-moon"></i>
+              <i class="far fa-sun"></i>
+            </button>
+          </div>
+        </div> -->
+
+        <div class="trending-resume" id="trending-resume">
+          
+          <h1 style="text-align: center;">Trending Resume<h1>
+          <center>
+            
+          <iframe src="sample.pdf#toolbar=0" ></iframe>
+       
+          <iframe src="sample.pdf#toolbar=0" ></iframe>
+           
+            <iframe src="sample.pdf#toolbar=0" ></iframe>
+          </center>
+
+          
+        </div>
+
+
+        <div class="trending-resume" id="recent-resume">
+          
+          <h1 style="text-align: center;">Recent Resume<h1>
+          <center>
+            <iframe src="sample.pdf#toolbar=0" >
+            </iframe>
+
+            <iframe src="sample.pdf#toolbar=0" >
+            </iframe>
+
+            <iframe src="sample.pdf#toolbar=0" >
+            </iframe>
+          </center>
+        </div>
+
+
+      </div>
+    </main>
+
+
+
+  <section>
+  <!-- Footer -->
+  <center>
+  <footer class="text-center text-white" style="background-color: #5bacdf; color:rgba(0, 0, 0, 0.829);">
+
+    <div class="text-center p-3">
+      © 2022
+      <a class="text-white" href="#">Rost Resume</a> All rights reserved
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</center>
+</section>
+  
+
+<!-- End of .container -->
+
+  
+
+    <!-- JavaScript Files -->
+
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="./app.js"></script>
+
+    <script>
+      let choose_img_Btn = document.querySelector(".btn");
+let choose_Input = document.querySelector(".file-input");
+
+
+// Input & Change to input img
+
+choose_img_Btn.addEventListener("click", () => choose_Input.click());
+choose_Input.addEventListener("change", () => {
+  let file = choose_Input.files[0];
+  if (!file) return;
+  imgSrc.src = URL.createObjectURL(file);
+});
+    </script>
+
+
+    
+
+  </body>
+</html>
